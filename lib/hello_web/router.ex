@@ -36,8 +36,10 @@ defmodule HelloWeb.Router do
     pipe_through :api
 
     post "/display-post-raw", InfoController, :display_post_raw_data
+    post "/display-post-model", InfoController, :display_post_model_json
     get "/get-header", InfoController, :get_header
     get "/get-json", InfoController, :display_json_convert
+
 
     get "/insert-db", InfoController, :insert_db
     get "/update-db", InfoController, :update_db

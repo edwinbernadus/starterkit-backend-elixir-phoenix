@@ -15,13 +15,14 @@ You can also run your app inside IEx (Interactive Elixir) as:
     $ iex -S mix phx.server
 
 snippet list:  
-//get  
-//routing_id  
-//post  
-//json_convert  
-//get_header  
-//sql_create  
-//sql_update  
-//sql_select_list  
-//sql_count  
-//web_socket
+- //get
+- //routing_id
+- //post
+- //post_body_to_model
+- //json_convert
+- //get_header
+- //sql_create
+- //sql_update
+- //sql_select_list
+- //sql_count
+- //web_socket

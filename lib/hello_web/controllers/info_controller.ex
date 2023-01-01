@@ -25,6 +25,23 @@ defmodule HelloWeb.InfoController do
     json(conn, %{result: body})
   end
 
+
+#  {
+#     "title" : "one",
+#     "amount" : 12421.3213,
+#     "requestRate" : 11.24141251251,
+#     "name" : "hello world",
+#     "number1" : 789
+# }
+
+  def display_post_model_json(conn, _params) do
+    {:ok, body, _conn} = read_body(conn)
+    # //post_body_to_model
+    output = Poison.decode!(body)
+    output2 = to_string(output["name"]) <> " + " <> to_string(output["number1"])
+    json(conn, %{result: output2})
+  end
+
   # //json_convert
   def display_json_convert(conn, _params) do
     data = %{name: "Alice", age: 30}
